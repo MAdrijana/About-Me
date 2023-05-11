@@ -17,7 +17,7 @@ body{
 }
 .cont {
     background-color: rgb(188, 229, 241);
-    height: 300vh;
+    height: 320vh;
 }
 header{
     display: flex;
@@ -41,10 +41,10 @@ header ul {
     display: flex;
     gap: 30px;
     list-style-type: none;
-    
 }
 header ul li {
     font-weight: 600px;
+    position: relative;
 }
 a {
     text-decoration: none;
@@ -52,7 +52,29 @@ a {
     margin-right: 10px;
     font-weight: 550 ;
     font-size: 1.1rem;
-}    
+} 
+a:hover{
+    color: blue;
+}
+li::before{
+    content: "";
+    background-color: blue;
+    position: absolute;
+    left:0;
+    bottom: -0.3rem;
+    height: 3px;
+    width: 0;
+    transition: 0.3s ease-in-out;
+}   
+li:hover::before{
+    content: "";
+    background-color: blue;
+    position: absolute;
+    left:0;
+    bottom: -0.3rem;
+    height: 3px;
+    width: 100%;
+}
 body {
 
     background-position: 0 auto;
@@ -152,10 +174,11 @@ h4 {
 footer {
     padding: 10px;
     background-color:white;
+    
 }
 footer .logo {
     background-color: #ffffff;
-    padding: 5px 5px 5px 10px;
+    padding: 10px 10px 10px 10px;
     border:blue solid 2px;
     border-radius: 100px;
     width: max-content;
@@ -189,8 +212,31 @@ footer .logo {
     display: inline-block;
     margin:auto;
     color: blue;
+    position: relative;
   }
   
-  .social-icons a i {
+.social-icons a i {
     font-size: 33px;
   }
+.social-icons a i:hover{
+    color:black
+}
+.social-icons a::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    left:0;
+    bottom: -0.3rem;
+    height: 3px;
+    width: 0;
+    transition: 0.3s ease-in-out;
+}   
+.social-icons a:hover::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    left:0;
+    bottom: -0.3rem;
+    height: 3px;
+    width: 100%;
+}
